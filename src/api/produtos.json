@@ -1,0 +1,48 @@
+[
+  {
+    "id":"1",
+    "title":"Fórmula de Lançamento",
+    "author":"Érico Rocha",
+    "price": 2500,
+    "category": "cursos",
+    "description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "img":"./api/produtos/img-default.jpg"
+  },
+  {
+    "id":"2",
+    "title":"Desafio 6 em 7",
+    "author":"Érico Rocha",
+    "price": 3500,
+    "category": "cursos",
+    "description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "img":"./api/produtos/img-default.jpg"
+  },
+  {
+    "id":"3",
+    "title":"Audio Book",
+    "author":"Augusto Cury",
+    "price": 999,
+    "category": "audios",
+    "description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "img":"./api/produtos/img-default.jpg"
+  },
+  {
+    "id":"4",
+    "title":"Audio Book",
+    "author":"Augusto Cury",
+    "price": 999,
+    "category": "audios",
+    "description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "img":"./api/produtos/img-default.jpg"
+  },
+  {
+    "id":"5",
+    "title":"Audio Book",
+    "author":"Paulo Vieira",
+    "price": 999,
+    "category": "audios",
+    "description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "img":"./api/produtos/img-default.jpg"
+  }
+
+]
