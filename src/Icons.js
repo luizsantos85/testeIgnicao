@@ -10,11 +10,13 @@ import { GridView as Grid } from '@styled-icons/material-outlined/GridView';
 import { Gear as Config } from '@styled-icons/bootstrap/Gear';
 import {Notifications } from '@styled-icons/material-outlined/Notifications';
 import {StarOutline as Star} from '@styled-icons/material/StarOutline';
+import {Heart} from '@styled-icons/boxicons-regular/Heart';
 import Avatar from './assets/Avatar.svg';
 import Logomarca from './assets/Brand.svg';
 
 export {
   Home,
+  Heart,
   Email,
   Chat,
   Todo,

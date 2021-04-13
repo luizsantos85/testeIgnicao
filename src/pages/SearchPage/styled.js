@@ -49,7 +49,7 @@ export const SearchArea = styled.div`
     margin: 40px 0 20px 0;
 
     .leftSide {
-      width: 370px;
+      width: 300px;
       p {
         font-size: 18px;
       }
@@ -57,7 +57,7 @@ export const SearchArea = styled.div`
     .rightSide {
       display: flex;
       justify-content: space-between;
-      width: calc(100% - 370px);
+      width: calc(100% - 300px);
       align-items: flex-end;
       padding-left: 20px;
 
@@ -113,29 +113,18 @@ export const ContentSearch = styled.div`
   margin-top: 40px;
 
   .filters {
-    width: 370px;
+    width: 300px;
     box-shadow: 0 1px 4px #ccc;
     border-radius: 5px;
     background-color: #fff;
   }
   .contentResultSearch {
     padding-left: 20px;
-    width: calc(100% - 370px);
+    width: calc(100% - 300px);
 
     .inputSearch {
       box-shadow: 0 1px 4px #ccc;
       margin-bottom: 20px;
-
-      input {
-        width: 100%;
-        height: 40px;
-        border: 0;
-        border-radius: 5px;
-        padding-left: 20px;
-        font-size: 20px;
-        color: #2c2c2c;
-        background-color: #fff;
-      }
     }
     .contentResultSearch {
     }

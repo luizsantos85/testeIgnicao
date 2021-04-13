@@ -1,15 +1,30 @@
-import React,{useState} from 'react';
-import {useLocation} from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
 import { SearchArea, ContentSearch } from './styled';
 import { Home, Config, Grid, List } from '../../Icons';
 import MenuItem from '../../components/Menu/MenuItem';
-import BoxResultSearch from '../../components/BoxResultSearch';
+import BoxResultSearch from '../../components/Search/BoxResultSearch';
+import InputSearch from '../../components/Search/InputSearch';
 
 const SearchPage = () => {
-  const location = useLocation();
-  const [navTitle,setNavTitle] = useState('');
+  const [products, setProducts] = useState('');
+  const [valueSearch, setValueSearch] = useState('');
+  const [activeSearch, setActiveSearch] = useState('');
 
-  
+  useEffect(() => {
+    if (products !== '') {
+      fetch('../../api/FakeApi/produtos.json')
+        .then((r) => r.json())
+        .then((json) => {
+          setProducts(json);
+        });
+    }
+  }, [products]);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setActiveSearch(valueSearch);
+    }, 1500);
+  }, [valueSearch]);
 
   return (
     <SearchArea className="animeLeft">
@@ -37,9 +52,9 @@ const SearchPage = () => {
           <p>200 resultados encontrados</p>
           <div className="buttonsLayout">
             <div className="select">
-            <select name="" id="">
-              <option value="list">Listagem</option>
-            </select>
+              <select name="" id="">
+                <option value="list">Listagem</option>
+              </select>
             </div>
             <div className="boxIcon">
               <Grid />
@@ -57,16 +72,21 @@ const SearchPage = () => {
           <div className="filter-2">Valor</div>
           <div className="filter-3">Categoria</div>
           <div className="filter-4">Avaliaçao</div>
-
         </div>
 
         <div className="contentResultSearch">
           <div className="inputSearch">
-            <input type="text" placeholder="Buscar" />
+            <InputSearch search={valueSearch} onSearch={setValueSearch} />
           </div>
-          <BoxResultSearch />
+          {products.length > 0 &&(
+            <>
+              {products.map(item => (
+                <BoxResultSearch data={item} key={item.id}/>
+              ))}
+            </>
+          )}
+          {/* {products.length > 0 && <BoxResultSearch data={products} />} */}
         </div>
-
       </ContentSearch>
     </SearchArea>
   );

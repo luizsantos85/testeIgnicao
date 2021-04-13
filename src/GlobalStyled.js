@@ -14,6 +14,7 @@ html, body, #root{
 body{
   font-family: 'Montserrat', sans-serif;
   background-color:#eee;
+  color:#2c2c2c;
 }
 button{
   cursor:pointer;
