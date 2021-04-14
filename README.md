@@ -54,6 +54,6 @@ $ npm start
 Made by [@luizsantos85](https://github.com/luizsantos85) :rocket:
 Viewport
 Window
-1423×615
-1431×797
+1455×724
+1745×821
 ×
