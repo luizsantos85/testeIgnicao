@@ -12,7 +12,7 @@ const SearchPage = () => {
   const [products, setProducts] = useState([]);
   const [valueSearch, setValueSearch] = useState('');
   const [activeSearch, setActiveSearch] = useState('');
-  const [radio, setRadio] = useState('');
+  const [radio, setRadio] = useState('todos');
   // const [totalPage, setTotalPage] = useState(0);
   // const [activePage, setActivePage] = useState(0);
 

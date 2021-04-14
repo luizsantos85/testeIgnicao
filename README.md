@@ -51,9 +51,19 @@ $ npm start
 
 ---
 
+## Não foi implementado :cry:
+
+- Sistema de busca
+- Resultado de pesquisa
+- Filtro de busca
+- Outros tipos de filtro
+- Sistema de avaliação
+
+---
+
 Made by [@luizsantos85](https://github.com/luizsantos85) :rocket:
 Viewport
 Window
-1423×615
-1431×797
+1455×724
+1745×821
 ×

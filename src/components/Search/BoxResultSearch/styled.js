@@ -50,6 +50,8 @@ export const BoxArea = styled.div`
       font-size: 14px;
       background-color: #686868;
       color: #fff;
+      border-radius: 5px;
+
       svg {
         width: 16px;
       }
