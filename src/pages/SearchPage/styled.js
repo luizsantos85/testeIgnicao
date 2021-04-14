@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const SearchArea = styled.div`
+  overflow-y: auto;
+
   .topoSearchArea {
     display: flex;
     justify-content: space-between;
@@ -105,6 +107,7 @@ export const SearchArea = styled.div`
       }
     }
   }
+  
 `;
 
 export const ContentSearch = styled.div`
@@ -122,10 +125,6 @@ export const ContentSearch = styled.div`
     padding-left: 20px;
     width: calc(100% - 300px);
 
-    .inputSearch {
-      box-shadow: 0 1px 4px #ccc;
-      margin-bottom: 20px;
-    }
     .contentResultSearch {
     }
   }

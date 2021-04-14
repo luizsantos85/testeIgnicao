@@ -9,6 +9,8 @@ export const InputArea = styled.input`
   font-size: 20px;
   color: #2c2c2c;
   background-color: #fff;
+  box-shadow: 0 1px 4px #ccc;
+  margin-bottom: 20px;
   background-image: url('../../../assets/search.svg');
   background-size: 30px;
   background-repeat: no-repeat;

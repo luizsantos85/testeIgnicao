@@ -15,6 +15,7 @@ body{
   font-family: 'Montserrat', sans-serif;
   background-color:#eee;
   color:#2c2c2c;
+  overflow-y: hidden;
 }
 button{
   cursor:pointer;

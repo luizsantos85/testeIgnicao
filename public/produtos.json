@@ -1,0 +1,53 @@
+  [
+    {
+      "id":"1",
+      "title":"Fórmula de Lançamento",
+      "author":"Érico Rocha",
+      "price": 2500,
+      "rating":"3.4",
+      "category": "cursos",
+      "description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+         "img":"./img-default.jpg"
+    },
+    {
+      "id":"2",
+      "title":"Desafio 6 em 7",
+      "author":"Érico Rocha",
+      "price": 3500,
+      "rating":"4.5",
+      "category": "cursos",
+      "description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+         "img":"./img-default.jpg"
+    },
+    {
+      "id":"3",
+      "title":"Audio Book",
+      "author":"Augusto Cury",
+      "price": 999,
+      "rating":"4.7",
+      "category": "audios",
+      "description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+         "img":"./img-default.jpg"
+    },
+    {
+      "id":"4",
+      "title":"Audio Book",
+      "author":"Augusto Cury",
+      "price": 999,
+      "rating":"3.0",
+      "category": "audios",
+      "description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+         "img":"./img-default.jpg"
+    },
+    {
+      "id":"5",
+      "title":"Audio Book",
+      "author":"Paulo Vieira",
+      "price": 999,
+      "rating":"3.2",
+      "category": "audios",
+      "description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+         "img":"./img-default.jpg"
+    }
+  
+  ]

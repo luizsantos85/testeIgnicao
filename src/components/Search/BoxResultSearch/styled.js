@@ -6,7 +6,7 @@ export const BoxArea = styled.div`
   background-color: #fff;
   border-radius: 5px;
   padding: 10px;
-
+  margin-bottom: 15px;
   display: flex;
 
   .boxImg {
@@ -23,11 +23,11 @@ export const BoxArea = styled.div`
       font-weight: normal;
     }
     .authorBody {
-      margin-top:5px;
+      margin-top: 5px;
       font-size: 12px;
       color: #7e7e7e;
-      span{
-        font-weight:bold;
+      span {
+        font-weight: bold;
       }
     }
     .descriptionBody {
@@ -38,16 +38,18 @@ export const BoxArea = styled.div`
   .boxButtons {
     border-left: 1px solid #dadada;
     padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 
     .reviews {
-      display: inline-block;
-      padding: 5px 0;
-      width:60px;
+      padding: 5px;
+      width: 60px;
       text-align: center;
       font-size: 14px;
       background-color: #686868;
       color: #fff;
-      svg{
+      svg {
         width: 16px;
       }
     }

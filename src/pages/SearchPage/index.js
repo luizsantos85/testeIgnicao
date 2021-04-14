@@ -6,19 +6,20 @@ import BoxResultSearch from '../../components/Search/BoxResultSearch';
 import InputSearch from '../../components/Search/InputSearch';
 
 const SearchPage = () => {
-  const [products, setProducts] = useState('');
+  const [products, setProducts] = useState([]);
   const [valueSearch, setValueSearch] = useState('');
   const [activeSearch, setActiveSearch] = useState('');
 
   useEffect(() => {
-    if (products !== '') {
-      fetch('../../api/FakeApi/produtos.json')
+    const getProducts = () => {
+      fetch('http://localhost:3000/produtos.json')
         .then((r) => r.json())
-        .then((json) => {
-          setProducts(json);
+        .then((r) => {
+          setProducts(r);
         });
-    }
-  }, [products]);
+    };
+    getProducts();
+  }, []);
 
   useEffect(() => {
     setTimeout(() => {
@@ -75,17 +76,11 @@ const SearchPage = () => {
         </div>
 
         <div className="contentResultSearch">
-          <div className="inputSearch">
-            <InputSearch search={valueSearch} onSearch={setValueSearch} />
-          </div>
-          {products.length > 0 &&(
-            <>
-              {products.map(item => (
-                <BoxResultSearch data={item} key={item.id}/>
-              ))}
-            </>
-          )}
-          {/* {products.length > 0 && <BoxResultSearch data={products} />} */}
+          <InputSearch search={valueSearch} onSearch={setValueSearch} />
+
+          {products.map((item) => (
+            <BoxResultSearch data={item} key={item.id} />
+          ))}
         </div>
       </ContentSearch>
     </SearchArea>

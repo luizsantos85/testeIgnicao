@@ -18,12 +18,12 @@ const BoxResultSearch = ({data}) => {
       </div>
       <div className="boxBody">
         <div className="titleBody">{data.title}</div>
-        <div className="authorBody">Por<span>{data.author}</span></div>
+        <div className="authorBody">Por <span>{data.author}</span></div>
         <div className="descriptionBody">{data.description}</div>
       </div>
 
       <div className="boxButtons">
-        <div className="reviews"> 3.4 <Star /></div>
+        <div className="reviews"> {data.rating} <Star /></div>
         <div className="price">{formatPrice(preco)}</div>
 
         <div className="buttons">
