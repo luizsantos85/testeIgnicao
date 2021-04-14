@@ -41,6 +41,7 @@ export const BoxArea = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    justify-content:center;
 
     .reviews {
       padding: 5px;
@@ -54,9 +55,9 @@ export const BoxArea = styled.div`
       }
     }
     .price {
+      align-self:center;
       margin-top: 15px;
       font-size: 18px;
-      text-align: center;
     }
 
     .buttons {

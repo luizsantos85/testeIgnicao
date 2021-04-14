@@ -13,6 +13,8 @@ import {StarOutline as Star} from '@styled-icons/material/StarOutline';
 import {Heart} from '@styled-icons/boxicons-regular/Heart';
 import Avatar from './assets/Avatar.svg';
 import Logomarca from './assets/Brand.svg';
+import Lupa from './assets/search.svg';
+
 
 export {
   Home,
@@ -29,5 +31,6 @@ export {
   Notifications,
   Star,
   Avatar,
-  Logomarca
+  Logomarca,
+  Lupa
 };

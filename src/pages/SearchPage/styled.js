@@ -107,7 +107,7 @@ export const SearchArea = styled.div`
       }
     }
   }
-  
+
 `;
 
 export const ContentSearch = styled.div`
@@ -124,8 +124,10 @@ export const ContentSearch = styled.div`
   .contentResultSearch {
     padding-left: 20px;
     width: calc(100% - 300px);
-
-    .contentResultSearch {
-    }
+    
   }
+    .paginationArea{
+
+      .paginationItem{}
+    }
 `;

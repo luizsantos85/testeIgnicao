@@ -5,27 +5,37 @@ import MenuItem from '../../components/Menu/MenuItem';
 import BoxResultSearch from '../../components/Search/BoxResultSearch';
 import InputSearch from '../../components/Search/InputSearch';
 
+let searchTimer = null;
+
 const SearchPage = () => {
   const [products, setProducts] = useState([]);
   const [valueSearch, setValueSearch] = useState('');
   const [activeSearch, setActiveSearch] = useState('');
+  // const [totalPage, setTotalPage] = useState(0);
+  // const [activePage, setActivePage] = useState(0);
+
+  const getProducts = () => {
+    fetch('http://localhost:3000/produtos.json')
+      .then((r) => r.json())
+      .then((r) => {
+        setProducts(r);
+        // setTotalPage()
+      });
+  };
+
+  const searchProduct = () => {};
 
   useEffect(() => {
-    const getProducts = () => {
-      fetch('http://localhost:3000/produtos.json')
-        .then((r) => r.json())
-        .then((r) => {
-          setProducts(r);
-        });
-    };
-    getProducts();
-  }, []);
-
-  useEffect(() => {
-    setTimeout(() => {
+    clearTimeout(searchTimer);
+    searchTimer = setTimeout(() => {
       setActiveSearch(valueSearch);
     }, 1500);
   }, [valueSearch]);
+
+  useEffect(() => {
+    setProducts([]);
+    getProducts();
+  }, [activeSearch]);
 
   return (
     <SearchArea className="animeLeft">
@@ -35,7 +45,7 @@ const SearchPage = () => {
           <MenuItem link="/">
             <Home size={13} />
           </MenuItem>
-          <p>Teste</p>
+          <p>Categoria</p>
         </div>
 
         <div className="rightSide">
@@ -77,10 +87,22 @@ const SearchPage = () => {
 
         <div className="contentResultSearch">
           <InputSearch search={valueSearch} onSearch={setValueSearch} />
-
           {products.map((item) => (
             <BoxResultSearch data={item} key={item.id} />
           ))}
+
+          {/*           Total: {totalPage}
+          {totalPage > 0 && (
+            <div className="paginationArea">
+              {Array(totalPage)
+                .fill(0)
+                .map((item, index) => (
+                  <div className="paginationItem" key={index}>
+                    {index + 1}
+                  </div>
+                ))}
+            </div>
+          )} */}
         </div>
       </ContentSearch>
     </SearchArea>

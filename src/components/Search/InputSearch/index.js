@@ -1,5 +1,6 @@
 import React from 'react';
-import { InputArea } from './styled';
+import { InputArea,Input } from './styled';
+import {Lupa} from '../../../Icons';
 
 const InputSearch = ({ search, onSearch }) => {
   const handleChange = (e) => {
@@ -7,12 +8,15 @@ const InputSearch = ({ search, onSearch }) => {
   };
 
   return (
-    <InputArea
-      placeholder="Buscar"
-      onChange={handleChange}
-      type="text"
-      value={search}
-    />
+    <InputArea>
+      <Input
+        placeholder="Buscar"
+        type="text"
+        onChange={handleChange}
+        value={search}
+      />
+      <img src={Lupa} alt="lupa"/>
+    </InputArea>
   );
 };
 
