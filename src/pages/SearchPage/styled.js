@@ -107,7 +107,6 @@ export const SearchArea = styled.div`
       }
     }
   }
-
 `;
 
 export const ContentSearch = styled.div`
@@ -120,14 +119,36 @@ export const ContentSearch = styled.div`
     box-shadow: 0 1px 4px #ccc;
     border-radius: 5px;
     background-color: #fff;
+    padding: 20px;
+    
+    .filter-1 {
+      display: flex;
+      flex-direction: column;
+      border-bottom: 1px solid #ccc;
+      margin-bottom: 10px;
+      label{
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+      p{
+        font-size: 18px;
+        font-weight:bold;
+        margin-bottom: 10px;
+      }
+    }
+    .filter-2 {
+    }
+    .filter-3 {
+    }
+    .filter-4 {
+    }
   }
   .contentResultSearch {
     padding-left: 20px;
     width: calc(100% - 300px);
-    
   }
-    .paginationArea{
-
-      .paginationItem{}
+  .paginationArea {
+    .paginationItem {
     }
+  }
 `;

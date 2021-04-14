@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { SearchArea, ContentSearch } from './styled';
 import { Home, Config, Grid, List } from '../../Icons';
+import api from '../../api/Api';
 import MenuItem from '../../components/Menu/MenuItem';
 import BoxResultSearch from '../../components/Search/BoxResultSearch';
 import InputSearch from '../../components/Search/InputSearch';
@@ -11,19 +12,19 @@ const SearchPage = () => {
   const [products, setProducts] = useState([]);
   const [valueSearch, setValueSearch] = useState('');
   const [activeSearch, setActiveSearch] = useState('');
+  const [radio, setRadio] = useState('');
   // const [totalPage, setTotalPage] = useState(0);
   // const [activePage, setActivePage] = useState(0);
 
-  const getProducts = () => {
-    fetch('http://localhost:3000/produtos.json')
-      .then((r) => r.json())
-      .then((r) => {
-        setProducts(r);
-        // setTotalPage()
-      });
+  const getProducts = async () => {
+    const prods = await api.getProducts();
+    if (prods !== '') {
+      setProducts(prods);
+    }
   };
-
-  const searchProduct = () => {};
+  const radioHandleClick = (e) => {
+    setRadio(e.target.value);
+  };
 
   useEffect(() => {
     clearTimeout(searchTimer);
@@ -79,17 +80,70 @@ const SearchPage = () => {
 
       <ContentSearch>
         <div className="filters">
-          <div className="filter-1">Preço</div>
-          <div className="filter-2">Valor</div>
-          <div className="filter-3">Categoria</div>
-          <div className="filter-4">Avaliaçao</div>
+          <form>
+            <div className="filter-1">
+              <p>Preço</p>
+              <label>
+                <input
+                  type="radio"
+                  value="10"
+                  checked={radio === '10'}
+                  onChange={radioHandleClick}
+                /> R$ 10,00
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  value="100"
+                  checked={radio === '100'}
+                  onChange={radioHandleClick}
+                /> R$ 10,00-$100,00
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  value="500"
+                  checked={radio === '500'}
+                  onChange={radioHandleClick}
+                /> R$ 100,00-500,00
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  value="500+"
+                  checked={radio === '500+'}
+                  onChange={radioHandleClick}
+                /> R$ 500,00
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  value="todos"
+                  checked={radio === 'todos'}
+                  onChange={radioHandleClick}
+                />{' '}
+                Todos
+              </label>
+            </div>
+            <div className="filter-2">Valor</div>
+            <div className="filter-3">Categoria</div>
+            <div className="filter-4">Avaliaçao</div>
+          </form>
         </div>
 
         <div className="contentResultSearch">
-          <InputSearch search={valueSearch} onSearch={setValueSearch} />
-          {products.map((item) => (
-            <BoxResultSearch data={item} key={item.id} />
-          ))}
+          <InputSearch
+            search={valueSearch}
+            onSearch={setValueSearch}
+            type="text"
+          />
+          {products.length > 0 && (
+            <>
+              {products.map((item) => (
+                <BoxResultSearch data={item} key={item.id} />
+              ))}
+            </>
+          )}
 
           {/*           Total: {totalPage}
           {totalPage > 0 && (

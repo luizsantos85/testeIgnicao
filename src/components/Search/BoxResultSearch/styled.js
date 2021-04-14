@@ -6,7 +6,7 @@ export const BoxArea = styled.div`
   background-color: #fff;
   border-radius: 5px;
   padding: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   display: flex;
 
   .boxImg {

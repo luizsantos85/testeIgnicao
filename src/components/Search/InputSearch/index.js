@@ -2,7 +2,7 @@ import React from 'react';
 import { InputArea,Input } from './styled';
 import {Lupa} from '../../../Icons';
 
-const InputSearch = ({ search, onSearch }) => {
+const InputSearch = ({ search, onSearch,type }) => {
   const handleChange = (e) => {
     onSearch(e.target.value);
   };
@@ -11,7 +11,7 @@ const InputSearch = ({ search, onSearch }) => {
     <InputArea>
       <Input
         placeholder="Buscar"
-        type="text"
+        type={type}
         onChange={handleChange}
         value={search}
       />
